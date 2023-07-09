@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/styles.css" />
-    
+
     <title>Weather Application</title>
     <script
       src="https://kit.fontawesome.com/dad0d6467f.js"
@@ -34,8 +34,8 @@
             <div class="col-4">
               <span class="line">
                 <img class="sunny-img" src="images/sunny.jpg" alt="Sunny day" />
-                <h2 id="temperature">24</h2> 
-                <span class="units"> 
+                <h2 id="temperature">24</h2>
+                <span class="units">
                   <a href="#" id="celsius-link">°C </a> |
                   <a href="#" id="fahrenheit-link">°F </a>
                 </span>
@@ -52,40 +52,63 @@
               <span class="line">
                 <ul>
                   <li>
-                    <div id="description-weather"> 
-                      Description 
-                    </div>
-              </li>
+                    <div id="description-weather">Description</div>
+                  </li>
                   <li>
-                    <div> 
-                      Humidity: 
-                      <span id="humidity-weather"> </span> 
+                    <div>
+                      Humidity:
+                      <span id="humidity-weather"> </span>
                       %
                     </div>
-              </li>
-                  <li> <div> 
-                    Wind: 
-                    <span id="wind-weather"> </span> 
-                    Km/h 
-                  </div>
-              </li>
+                  </li>
+                  <li>
+                    <div>
+                      Wind:
+                      <span id="wind-weather"> </span>
+                      Km/h
+                    </div>
+                  </li>
+                </ul>
               </span>
             </div>
           </div>
           <div class="row">
             <div class="col-7">
               <form id="search-form">
-                <input type="search" id="search-input" placeholder="Type a city..." autofocus="on" class="form-control shadow-sm border-0" required />
+                <input
+                  type="search"
+                  id="search-input"
+                  placeholder="Type a city..."
+                  autofocus="on"
+                  class="form-control shadow-sm border-0"
+                  required
+                />
                 <div class="col-2">
-                  <input type="submit" class="btn btn-warning" value="Search" class="form-control" />
+                  <input
+                    type="submit"
+                    class="btn btn-warning"
+                    value="Search"
+                    class="form-control"
+                  />
                 </div>
               </form>
             </div>
             <div class="col-2">
-              <input type="submit" id="current-location" class="btn btn-primary" value="Current" class="form-control" />
+              <input
+                type="submit"
+                id="current-location"
+                class="btn btn-primary"
+                value="Current"
+                class="form-control"
+              />
             </div>
             <div class="col-3">
-              <input type="submit" class="btn btn-primary" value="Favourites" class="form-control" />
+              <input
+                type="submit"
+                class="btn btn-primary"
+                value="Favourites"
+                class="form-control"
+              />
             </div>
           </div>
           <hr />
