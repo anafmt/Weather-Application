@@ -41,3 +41,7 @@ ul {
 li {
   list-style: none;
 }
+
+.git-hub-link {
+  text-decoration: none;
+}
