@@ -27,160 +27,149 @@
   </head>
   <body>
     <div class="container">
-      <h1>Weather Application</h1>
-      <div class="card">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-4">
-              <span class="line">
-                <img class="sunny-img" src="images/sunny.jpg" alt="Sunny day" />
-                <h2 id="temperature">24</h2>
-                <span class="units">
-                  <a href="#" id="celsius-link">°C </a> |
-                  <a href="#" id="fahrenheit-link">°F </a>
-                </span>
-              </span>
-            </div>
-            <div class="col-5">
-              <span class="line">
-                <h3 id="chosen-city">Luxembourg</h3>
-                <div class="col-12" id="current-date">Sunday, 28 May 17:36</div>
-              </span>
-            </div>
-
-            <div class="col-3">
-              <span class="line">
-                <ul>
-                  <li>
-                    <div id="description-weather">Description</div>
-                  </li>
-                  <li>
-                    <div>
-                      Humidity:
-                      <span id="humidity-weather"> </span>
-                      %
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <h1>Weather Application</h1>
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-3">
+                  <i class="fa-solid fa-sun sun-icon-top"></i>
+                  <span class="line">
+                    <h6>
+                      <strong id="temperature">24</strong>
+                      <small class="units">°C | <a href="#"> °F</a> </small>
+                    </h6>
+                  </span>
+                </div>
+                <div class="col-5">
+                  <span class="line">
+                    <h3 id="chosen-city">Luxembourg</h3>
+                    <div class="col-12" id="current-date">
+                      Sunday, 28 May 17:36
                     </div>
-                  </li>
-                  <li>
-                    <div>
-                      Wind:
-                      <span id="wind-weather"> </span>
-                      Km/h
+                  </span>
+                </div>
+                <div class="col-3">
+                  <span class="line">
+                    <ul>
+                      <li>
+                        <div id="description-weather">Description</div>
+                      </li>
+                      <li>
+                        <div>
+                          Humidity:
+                          <span id="humidity-weather"> </span>
+                          %
+                        </div>
+                      </li>
+                      <li>
+                        <div>
+                          Wind:
+                          <span id="wind-weather"> </span>
+                          Km/h
+                        </div>
+                      </li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="row">
+                <div class="col-7">
+                  <form id="search-form">
+                    <input
+                      type="search"
+                      id="search-input"
+                      placeholder="Type a city..."
+                      autofocus="on"
+                      class="form-control shadow-sm border-0"
+                      required
+                    />
+                    <div class="col-2">
+                      <input
+                        type="submit"
+                        class="btn btn-warning"
+                        value="Search"
+                        class="form-control"
+                      />
                     </div>
-                  </li>
-                </ul>
-              </span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-7">
-              <form id="search-form">
-                <input
-                  type="search"
-                  id="search-input"
-                  placeholder="Type a city..."
-                  autofocus="on"
-                  class="form-control shadow-sm border-0"
-                  required
-                />
-                <div class="col-2">
+                  </form>
+                </div>
+                <div class="col-5">
                   <input
                     type="submit"
-                    class="btn btn-warning"
-                    value="Search"
+                    id="current-location"
+                    class="btn btn-primary"
+                    value="Local"
                     class="form-control"
                   />
                 </div>
-              </form>
-            </div>
-            <div class="col-2">
-              <input
-                type="submit"
-                id="current-location"
-                class="btn btn-primary"
-                value="Current"
-                class="form-control"
-              />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                class="btn btn-primary"
-                value="Favourites"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <hr />
-          <br />
-          <div class="row">
-            <div class="col-2">
-              <div class="card">
-                <h6 class="card-title">Day 1</h6>
-                <i class="fa-solid fa-sun sun-icon"></i>
-                <div class="card-body">
-                  <p class="card-text">Xº</p>
-                </div>
               </div>
-            </div>
-            <div class="col-2">
-              <div class="card">
-                <h6 class="card-title">Day 2</h6>
-                <i class="fa-solid fa-sun sun-icon"></i>
-                <div class="card-body">
-                  <p class="card-text">Xº</p>
+              <hr />
+              <br />
+              <div class="row">
+                <div class="col-sm">
+                  <div class="card">
+                    <h6 class="card-title">Day 1</h6>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                    <div class="card-body">
+                      <p class="card-text">Xº</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card">
-                <h6 class="card-title">Day 3</h6>
-                <i class="fa-solid fa-sun sun-icon"></i>
-                <div class="card-body">
-                  <p class="card-text">Xº</p>
+                <div class="col-sm">
+                  <div class="card">
+                    <h6 class="card-title">Day 2</h6>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                    <div class="card-body">
+                      <p class="card-text">Xº</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card">
-                <h6 class="card-title">Day 4</h6>
-                <i class="fa-solid fa-sun sun-icon"></i>
-                <div class="card-body">
-                  <p class="card-text">Xº</p>
+                <div class="col-sm">
+                  <div class="card">
+                    <h6 class="card-title">Day 3</h6>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                    <div class="card-body">
+                      <p class="card-text">Xº</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card">
-                <h6 class="card-title">Day 5</h6>
-                <i class="fa-solid fa-sun sun-icon"></i>
-                <div class="card-body">
-                  <p class="card-text">Xº</p>
+                <div class="col-sm">
+                  <div class="card">
+                    <h6 class="card-title">Day 4</h6>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                    <div class="card-body">
+                      <p class="card-text">Xº</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-2">
-              <div class="card">
-                <h6 class="card-title">Day 6</h6>
-                <i class="fa-solid fa-sun sun-icon"></i>
-                <div class="card-body">
-                  <p class="card-text">Xº</p>
+                <div class="col-sm">
+                  <div class="card">
+                    <h6 class="card-title">Day 5</h6>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                    <div class="card-body">
+                      <p class="card-text">Xº</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <br />
+        <p>
+          <a
+            class="git-hub-link"
+            href="https://github.com/anafmt/Weather-Application"
+            target="_blank"
+          >
+            Open-source code </a
+          >by Ana FM Tavares
+        </p>
       </div>
-      <br />
-      <p>
-        <a
-          class="git-hub-link"
-          href="https://github.com/anafmt/Weather-Application"
-          target="_blank"
-        >
-          Open-source code </a
-        >by Ana FM Tavares
-      </p>
     </div>
     <script src="src/index.js"></script>
   </body>

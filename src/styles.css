@@ -1,31 +1,56 @@
 body {
   background-color: rgb(130, 166, 170, 0.7);
-  font-family: "Roboto", sans-serif;
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
 }
 
 h1 {
   font-size: small;
   color: grey;
 }
-h2 {
-  padding: 20px;
-  margin-left: 30px;
-  font-size: 35px;
+
+.sun-icon-top {
+  display: block;
+  margin: -60px auto;
+  color: rgb(130, 166, 170, 0.7);
   position: relative;
-  top: -90px;
+  top: 69px;
+  left: 23px;
+  font-size: 96px;
+}
+
+#temperature {
+  color: #272142;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: 27.5px;
 }
 
 .units {
-  margin-left: 90px;
+  color: #272142;
   position: relative;
-  top: -160px;
+  top: -20px;
 }
 
-.sunny-img {
-  width: 150px;
+h3 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 29px;
+  margin: 20px 0 10px;
+}
+
+.units a {
+  text-decoration: none;
+  color: black;
 }
 
 .line {
+  color: #272142;
   position: relative;
   top: 40px;
 }
@@ -40,8 +65,10 @@ ul {
 }
 li {
   list-style: none;
+  color: rgba(100, 111, 112, 0.7);
 }
 
 .git-hub-link {
   text-decoration: none;
+  color: rgb(255, 200, 0);
 }
