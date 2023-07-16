@@ -68,6 +68,10 @@ li {
   color: rgba(100, 111, 112, 0.7);
 }
 
+#description-weather::first-letter {
+  text-transform: capitalize;
+}
+
 .git-hub-link {
   text-decoration: none;
   color: rgb(255, 200, 0);
