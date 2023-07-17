@@ -110,6 +110,12 @@ function newLocation(position) {
     humidity.innerHTML = response.data.temperature.humidity;
     let wind = document.querySelector("#wind-weather");
     wind.innerHTML = Math.round(response.data.wind.speed);
+    let iconElement = document.querySelector("#icon");
+    iconElement.setAttribute(
+      "src",
+      `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    );
+    iconElement.setAttribute("alt", response.data.condition.description);
   }
 
   axios.get(apiUrl).then(showTemperature);
