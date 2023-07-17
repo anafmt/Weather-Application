@@ -51,7 +51,12 @@ h3 {
 
 .units a {
   text-decoration: none;
-  color: black;
+  cursor: default;
+}
+
+.active {
+  color: #272142;
+  cursor: default;
 }
 
 .line {
