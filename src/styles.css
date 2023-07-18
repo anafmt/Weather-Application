@@ -10,7 +10,7 @@ body {
 
 h1 {
   font-size: small;
-  color: grey;
+  color: rgba(26, 63, 67, 0.908);
 }
 
 .sun-icon-top {
@@ -85,6 +85,10 @@ li {
 #search-input {
   background-color: rgba(130, 166, 170, 0.406);
   color: aliceblue;
+}
+
+.btn {
+  color: #272142;
 }
 
 .git-hub-link {
