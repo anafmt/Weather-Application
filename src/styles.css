@@ -91,6 +91,11 @@ li {
   color: #272142;
 }
 
+#current-location {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
 .git-hub-link {
   text-decoration: none;
   color: rgba(26, 63, 67, 0.908);
