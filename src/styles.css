@@ -96,6 +96,26 @@ li {
   padding-right: 18px;
 }
 
+.weather-forecast {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weather-forecast-date {
+  font-size: 15px;
+  color: #272142;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+.weather-forecast-temperature-max {
+  color: #272142;
+}
+.weather-forecast-temperature-min {
+  color: rgba(20, 60, 65, 0.632);
+}
+
 .git-hub-link {
   text-decoration: none;
   color: rgba(26, 63, 67, 0.908);
