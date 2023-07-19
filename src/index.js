@@ -90,8 +90,8 @@ function searchCity(city) {
 }
 
 function newLocation(position) {
-  let lat = position.data.coordinates.latitude;
-  let lon = position.data.coordinates.longitude;
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
   let units = "metric";
   let apiKey = "da34a047131b20d5faab7d8tfo459827";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
