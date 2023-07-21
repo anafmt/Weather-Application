@@ -40,30 +40,47 @@ if (minutes < 10) {
 let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = `${day}, ${date} ${month} ${hour}:${minutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
-      <div class="col-2">
-        <div class="weather-forecast-date">${day}</div>
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class="col-sm">
+        <div class="weather-forecast-date"> <strong> ${formatDay(
+          forecastDay.time
+        )} </strong>
+        </div>
         <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAQBJREFUaN7t2csNwyAMBmBGYYSMwhgdgxEYjRW6ARu4HNyqB0CKednElf5b2/hLSALGAICRHKMABSjgUMDdD7xfLifkxByoJOJ33O3/nwHIhVgsKDWKriXhb+0WQD6wJxZegvhlADzrcUDhpeFlpwLyAa5BZ711Na4pgAXFNxFdABw2K4r/R9iRgLiw+N89MQSATxvYFN8F2DB0qkOJCggbi/8m9AASA0AiAXBuA0ziKIDACBAogMgIECkAYBUFKEABzwOIf4yKf5HJnkqIn8wxmk775y5oxC8pj1jUH9FWEd/YOqK1eERz94j2euFqUCF7NzjYbzHpLqUCFKCAJfkAq7RimK7qUtAAAAAASUVORK5CYII="
+          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+            forecastDay.condition.icon
+          }.png"
           alt=""
-         width="38"
+         width="42"
          />
         <div class="weather-forecast-temperatures">
-         <span class="weather-forecast-temperature-max"> 18° </span>
-         <span class="weather-forecast-temperature-min"> 12° </span>
+         <span class="weather-forecast-temperature-max"> ${Math.round(
+           forecastDay.temperature.maximum
+         )}° </span>
+         <span class="weather-forecast-temperature-min"> ${Math.round(
+           forecastDay.temperature.minimum
+         )}°  </span>
         </div>
        </div>
     `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;

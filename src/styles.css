@@ -75,7 +75,7 @@ ul {
 }
 li {
   list-style: none;
-  color: rgba(100, 111, 112, 0.7);
+  color: #272142;
 }
 
 #description-weather::first-letter {
