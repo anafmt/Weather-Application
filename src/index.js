@@ -149,6 +149,7 @@ function newLocation(position) {
   let units = "metric";
   let apiKey = "da34a047131b20d5faab7d8tfo459827";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
+  let apiUrl1 = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
 
   function showTemperature(response) {
     let temperature = Math.round(response.data.temperature.current);
@@ -210,6 +211,7 @@ function newLocation(position) {
     forecastHTML = forecastHTML + `</div>`;
     forecastElement.innerHTML = forecastHTML;
   }
+  axios.get(apiUrl1).then(displayForecast);
 }
 
 function currentPosition() {
