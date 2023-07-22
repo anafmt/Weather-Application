@@ -172,6 +172,44 @@ function newLocation(position) {
     celsiusTemperature = response.data.temperature.current;
   }
   axios.get(apiUrl).then(showTemperature);
+
+  function displayForecast(response) {
+    let forecast = response.data.daily;
+    let forecastElement = document.querySelector("#forecast");
+
+    let forecastHTML = `<div class="row">`;
+    forecast.forEach(function (forecastDay, index) {
+      if (index < 5) {
+        forecastHTML =
+          forecastHTML +
+          `
+      <div class="col-sm">
+        <div class="weather-forecast-date"> <strong> ${formatDay(
+          forecastDay.time
+        )} </strong>
+        </div>
+        <img
+          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+            forecastDay.condition.icon
+          }.png"
+          alt=""
+         width="42"
+         />
+        <div class="weather-forecast-temperatures">
+         <span class="weather-forecast-temperature-max"> ${Math.round(
+           forecastDay.temperature.maximum
+         )}° </span>
+         <span class="weather-forecast-temperature-min"> ${Math.round(
+           forecastDay.temperature.minimum
+         )}°  </span>
+        </div>
+       </div>
+    `;
+      }
+    });
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+  }
 }
 
 function currentPosition() {
